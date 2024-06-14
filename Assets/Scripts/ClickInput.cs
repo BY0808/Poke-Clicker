@@ -30,7 +30,7 @@ public class ClickInput : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1f);
-            OnClickEvent?.Invoke(++GameManager.Instance.ClickCount);
+            OnClickEvent?.Invoke(GameManager.Instance.ClickCount += ChangeClickPerCount);
             Debug.Log("Auto : " + GameManager.Instance.ClickCount);
         }
     }
