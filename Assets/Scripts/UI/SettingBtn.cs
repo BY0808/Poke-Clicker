@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SettingBtn : MonoBehaviour
+public class SettingBtn : PauseBtn
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject _settingPanel;
 
-    // Update is called once per frame
-    void Update()
+    public void ButtonOnClick()
     {
-        
+        _settingPanel.SetActive(!_settingPanel.activeSelf);
     }
 }
