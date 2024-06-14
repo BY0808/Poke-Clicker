@@ -8,7 +8,7 @@ public class ClickInput : MonoBehaviour
 {
     public event Action<int> OnClickEvent;
 
-    public int count=0;
+    public int ClickCount=0;
 
     private void Start()
     {
@@ -19,9 +19,9 @@ public class ClickInput : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started)
         {
-            count++;
-            OnClickEvent?.Invoke(count);
-            Debug.Log(count);
+            ClickCount++;
+            OnClickEvent?.Invoke(ClickCount);
+            Debug.Log(ClickCount);
         }
     }
 
@@ -30,8 +30,8 @@ public class ClickInput : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(10f);
-            OnClickEvent?.Invoke(++count);
-            Debug.Log("Auto : " + count);
+            OnClickEvent?.Invoke(++ClickCount);
+            Debug.Log("Auto : " + ClickCount);
         }
     }
 }
