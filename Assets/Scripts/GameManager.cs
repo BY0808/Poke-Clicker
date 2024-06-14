@@ -8,7 +8,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [SerializeField] private TextMeshProUGUI _clickCountText;
-    [SerializeField] private ClickInput _clickInput;
+    [SerializeField] private TextMeshProUGUI _pointText;
+
+    public int ClickCount = 0;
+    private int _curClickCount = 0;
+    public int Point = 100;
 
     private void Awake()
     {
@@ -19,10 +23,26 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
         UpdateClickCountUI();
+        AddPoint();
     }
 
     private void UpdateClickCountUI()
     {
-        _clickCountText.text = _clickInput.ClickCount.ToString();
+        _clickCountText.text = ClickCount.ToString();
+    }
+
+    private void UpdatePoint()
+    {
+        _pointText.text = Point.ToString();
+    }
+
+    private void AddPoint()
+    {
+        if (ClickCount - _curClickCount == 100)
+        {
+            Point += 10;
+            _curClickCount = ClickCount;
+        }
+        UpdatePoint();
     }
 }

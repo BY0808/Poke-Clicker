@@ -18,17 +18,6 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "32793f3a-fea1-4648-95d5-47eda24e973c",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Clicker",
-                    "action": "Click",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "4400ff6a-4915-4ec8-bf1b-1148a2b2f6c0",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -45,6 +34,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Clicker",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c2d26e03-7e0d-48ad-bece-32037d2c9728",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false

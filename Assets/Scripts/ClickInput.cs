@@ -8,8 +8,6 @@ public class ClickInput : MonoBehaviour
 {
     public event Action<int> OnClickEvent;
 
-    public int ClickCount=0;
-
     private void Start()
     {
         StartCoroutine(AutoClickCoroutine());
@@ -19,9 +17,9 @@ public class ClickInput : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started)
         {
-            ClickCount++;
-            OnClickEvent?.Invoke(ClickCount);
-            Debug.Log(ClickCount);
+            GameManager.Instance.ClickCount++;
+            OnClickEvent?.Invoke(GameManager.Instance.ClickCount);
+            Debug.Log(GameManager.Instance.ClickCount);
         }
     }
 
@@ -29,9 +27,9 @@ public class ClickInput : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(10f);
-            OnClickEvent?.Invoke(++ClickCount);
-            Debug.Log("Auto : " + ClickCount);
+            yield return new WaitForSeconds(1f);
+            OnClickEvent?.Invoke(++GameManager.Instance.ClickCount);
+            Debug.Log("Auto : " + GameManager.Instance.ClickCount);
         }
     }
 }
