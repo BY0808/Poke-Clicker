@@ -8,6 +8,8 @@ public class ClickInput : MonoBehaviour
 {
     public event Action<int> OnClickEvent;
 
+    public int ChangeClickPerCount = 1;
+
     private void Start()
     {
         StartCoroutine(AutoClickCoroutine());
@@ -17,7 +19,7 @@ public class ClickInput : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started)
         {
-            GameManager.Instance.ClickCount++;
+            GameManager.Instance.ClickCount += ChangeClickPerCount;
             OnClickEvent?.Invoke(GameManager.Instance.ClickCount);
             Debug.Log(GameManager.Instance.ClickCount);
         }
