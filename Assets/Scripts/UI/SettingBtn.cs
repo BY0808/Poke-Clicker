@@ -13,7 +13,7 @@ public class SettingBtn : PauseBtn
 
     public void QuitButton()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 }
