@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         _clickCountText.text = ClickCount.ToString();
     }
 
-    private void UpdatePoint()
+    public void UpdatePoint()
     {
         _pointText.text = Point.ToString();
     }
@@ -43,6 +43,12 @@ public class GameManager : MonoBehaviour
             Point += 10;
             _curClickCount = ClickCount;
         }
+        UpdatePoint();
+    }
+
+    public void UsePoint(int point)
+    {
+        Point -= point;
         UpdatePoint();
     }
 }
