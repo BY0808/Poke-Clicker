@@ -10,4 +10,9 @@ public class SettingBtn : PauseBtn
     {
         _settingPanel.SetActive(!_settingPanel.activeSelf);
     }
+
+    public void QuitButton()
+    {
+
+    }
 }

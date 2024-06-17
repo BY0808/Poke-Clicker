@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4675086860493170072}
   - component: {fileID: 7948316175989187703}
   - component: {fileID: 8146546812772209909}
-  - component: {fileID: 3912621541336903468}
   m_Layer: 0
   m_Name: air-hot-balloon
   m_TagString: Untagged
@@ -107,15 +106,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3912621541336903468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4378060466113623352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84eab5a8c40ec4d4b84d90d08c03614a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
