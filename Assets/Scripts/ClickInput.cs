@@ -8,7 +8,7 @@ public class ClickInput : MonoBehaviour
 {
     public event Action<int> OnClickEvent;
 
-    public int ChangeClickPerCount = 5;
+    [SerializeField] public int ChangeClickPerCount = 5;
 
     private void Start()
     {
