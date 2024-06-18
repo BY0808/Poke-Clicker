@@ -8,8 +8,6 @@ public class ClickInput : MonoBehaviour
 {
     public event Action<int> OnClickEvent;
 
-    [SerializeField] public int ChangeClickPerCount = 5;
-
     private void Start()
     {
         StartCoroutine(AutoClickCoroutine());
@@ -19,7 +17,7 @@ public class ClickInput : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started)
         {
-            GameManager.Instance.ClickCount += ChangeClickPerCount;
+            GameManager.Instance.ClickCount += GameManager.Instance.ChangeClickPerCount;
             OnClickEvent?.Invoke(GameManager.Instance.ClickCount);
             Debug.Log(GameManager.Instance.ClickCount);
         }
@@ -30,7 +28,7 @@ public class ClickInput : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1f);
-            OnClickEvent?.Invoke(GameManager.Instance.ClickCount += ChangeClickPerCount);
+            OnClickEvent?.Invoke(GameManager.Instance.ClickCount += GameManager.Instance.ChangeClickPerCount);
             Debug.Log("Auto : " + GameManager.Instance.ClickCount);
         }
     }

@@ -10,6 +10,7 @@ public class Store : MonoBehaviour
     [SerializeField] private ClickInput _clickInput;
     [SerializeField] private TextMeshProUGUI _clickPointText;
     [SerializeField] private TextMeshProUGUI _clickIcon;
+    private int _curPerClick;
 
     [Header("ChangeClickerImage")]
     [SerializeField] private GameObject _clickerDeco;
@@ -29,6 +30,7 @@ public class Store : MonoBehaviour
 
     void Start()
     {
+        _curPerClick = GameManager.Instance.ChangeClickPerCount;
         _curSprite = _clickerDeco.GetComponent<SpriteRenderer>();
         _curBackground = _backgroundDeco.GetComponent<SpriteRenderer>();
     }
@@ -43,7 +45,8 @@ public class Store : MonoBehaviour
             _clickIcon.text = (int.Parse(_clickIcon.text) * 2).ToString();
 
             //구매 내용 업데이트
-            _clickInput.ChangeClickPerCount *= 2;
+            _curPerClick *= 2;
+            GameManager.Instance.UpdatePerClick(_clickIcon);
         }
         else
         {

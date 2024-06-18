@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     private int _curClickCount = 0;
     public int Point = 100;
 
+    [SerializeField] public int ChangeClickPerCount = 5;
+
     private void Awake()
     {
         Instance = this;
@@ -24,6 +26,11 @@ public class GameManager : MonoBehaviour
     {
         UpdateClickCountUI();
         AddPoint();
+    }
+
+    public void UpdatePerClick(TextMeshProUGUI text)
+    {
+        ChangeClickPerCount = int.Parse(text.text);
     }
 
     private void UpdateClickCountUI()
@@ -38,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     private void AddPoint()
     {
-        if (ClickCount - _curClickCount == 100)
+        if (ClickCount - _curClickCount >= 100)
         {
             Point += 10;
             _curClickCount = ClickCount;
