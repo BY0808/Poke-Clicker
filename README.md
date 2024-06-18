@@ -16,3 +16,4 @@
 
 ### 플레이
 https://github.com/BY0808/Poke-Clicker/assets/166494058/c87be1dd-67f4-497e-be36-7ebfa915f70b
+https://youtu.be/oO9RZeZnY64
