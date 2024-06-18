@@ -1,6 +1,6 @@
-#내일배움캠프_4기_Chapter 3-3.개인프로젝트_A07
+# 내일배움캠프_4기_Chapter 3-3.개인프로젝트_A07
 
-##2D 클리커 게임
+## 2D 클리커 게임
 
 ### 구현 목록
 1. 클릭 이벤트 처리
@@ -15,3 +15,4 @@
 ![image](https://github.com/BY0808/Poke-Clicker/assets/166494058/0d47b518-e715-4f6f-b64f-98a3ffca2b67)
 
 ### 플레이
+https://github.com/BY0808/Poke-Clicker/assets/166494058/c87be1dd-67f4-497e-be36-7ebfa915f70b
